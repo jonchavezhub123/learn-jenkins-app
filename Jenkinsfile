@@ -24,13 +24,14 @@ pipeline {
         stage('Tests'){
             parallel {
                 stage('Unit Tests') {
+              /*
                     agent {
                         docker {
                             image 'node:18-alpine'
                             reuseNode true
                         }
                     }
-                    
+                    */
                     steps {
                         sh '''
                             #test -f build/index.html
